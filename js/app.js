@@ -1,3 +1,4 @@
+
 /* Conso GTE — application locale (aucune donnée n'est envoyée nulle part). */
 (function () {
   'use strict';
