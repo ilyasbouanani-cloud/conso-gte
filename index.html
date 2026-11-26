@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Conso GTE</title>
+<meta name="description" content="Suivi personnel de la consommation : électrique vs essence. Données stockées uniquement sur cet appareil.">
+<meta name="theme-color" content="#1D5FD1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A2A66" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Conso GTE">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <h1 id="title">Conso GTE</h1>
+  <p id="sub"></p>
+</header>
+
+<main id="view" aria-live="polite"></main>
+
+<nav class="tabbar" aria-label="Navigation principale">
+  <button data-act="tab" data-tab="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Accueil</span></button>
+  <button data-act="tab" data-tab="history"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Historique</span></button>
+  <button data-act="tab" data-tab="add" class="add"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span>Ajouter</span></button>
+  <button data-act="tab" data-tab="sim"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2M9 2h6"/></svg><span>Simulateur</span></button>
+  <button data-act="tab" data-tab="settings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h9M19 6h1M4 12h3M13 12h7M4 18h11M21 18h-1"/><circle cx="16" cy="6" r="2.2"/><circle cx="10" cy="12" r="2.2"/><circle cx="18" cy="18" r="2.2"/></svg><span>Réglages</span></button>
+</nav>
+
+<div id="overlay" class="overlay" hidden></div>
+<div id="toast" class="toast" role="status" hidden></div>
+<input type="file" id="importFile" accept=".json,application/json" hidden>
+
+<noscript><p style="padding:24px">Cette application nécessite JavaScript.</p></noscript>
+<script src="js/calc.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
